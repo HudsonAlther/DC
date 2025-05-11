@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dive Connections | Charlottesville, VA</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --clr-primary:#007bc3;          /* ocean blue */
+      --clr-secondary:#00a8e8;        /* lighter blue */
+      --clr-dark:#00293c;
+      --clr-light:#f4faff;
+      --max-width:1100px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:"Poppins",sans-serif;color:var(--clr-dark);background:var(--clr-light);line-height:1.5}
+    a{text-decoration:none;color:inherit}
+
+    /* ----------  NAV  ---------- */
+    header{width:100%;position:fixed;top:0;left:0;background:#fff;box-shadow:0 2px 4px rgba(0,0,0,.06);z-index:10}
+    .nav{max-width:var(--max-width);margin:auto;display:flex;align-items:center;justify-content:space-between;padding:.75rem 1rem}
+    .logo{font-size:1.25rem;font-weight:600;color:var(--clr-primary)}
+    .nav ul{display:flex;gap:1.5rem;list-style:none}
+    .nav li{font-size:.95rem;font-weight:500}
+    .menu-toggle{display:none;font-size:1.5rem;border:none;background:none;color:var(--clr-primary)}
+    @media(max-width:768px){
+      .nav ul{position:absolute;top:65px;left:0;flex-direction:column;width:100%;background:#fff;display:none}
+      .nav ul.open{display:flex}
+      .menu-toggle{display:block}
+    }
+
+    /* ----------  HERO  ---------- */
+    .hero{height:100vh;background:url('assets/hero.jpg') center/cover no-repeat;display:flex;align-items:center;justify-content:center;position:relative}
+    .hero::before{content:"";position:absolute;inset:0;background:rgba(0,0,0,.45)}
+    .hero-content{position:relative;text-align:center;color:#fff;padding:0 1rem}
+    .hero h1{font-size:clamp(2.2rem,5vw,3.5rem);font-weight:600;margin-bottom:.5rem}
+    .hero p{font-size:1.15rem;margin-bottom:1.5rem}
+    .btn{display:inline-block;padding:.75rem 1.75rem;border-radius:40px;font-weight:600;text-transform:uppercase;font-size:.9rem;transition:.25s}
+    .btn-primary{background:var(--clr-secondary);color:#fff}
+    .btn-primary:hover{background:#0092c6}
+    .btn-outline{border:2px solid #fff;color:#fff;margin-left:.5rem}
+    .btn-outline:hover{background:#fff;color:var(--clr-primary)}
+
+    /* ----------  SECTIONS  ---------- */
+    section{padding:4.5rem 1rem}
+    .container{max-width:var(--max-width);margin:auto}
+
+    .section-title{text-align:center;font-size:2rem;font-weight:600;margin-bottom:3rem;color:var(--clr-primary)}
+
+    /* About */
+    .about-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:2rem;align-items:center}
+    .about-grid img{width:100%;border-radius:12px}
+    .about-text p{margin-bottom:1rem;font-size:1rem}
+
+    /* Services */
+    .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:2rem}
+    .service-card{background:#fff;border-radius:12px;padding:2rem;text-align:center;box-shadow:0 2px 6px rgba(0,0,0,.08)}
+    .service-card h3{margin:1rem 0 .5rem;font-size:1.1rem}
+    .service-card p{font-size:.92rem}
+
+    /* Contact */
+    .contact-info{display:flex;flex-direction:column;gap:.75rem;font-size:1rem;text-align:center}
+    .contact-info a{color:var(--clr-primary)}
+    .map{margin-top:2rem;width:100%;height:350px;border:0;border-radius:12px}
+
+    /* Footer */
+    footer{background:var(--clr-dark);color:#fff;text-align:center;padding:1.5rem}
+    footer a{color:var(--clr-secondary)}
+  </style>
+</head>
+<body>
+
+  <!-- ---------- NAV ---------- -->
+  <header>
+    <nav class="nav">
+      <a href="#" class="logo">Dive Connections</a>
+
+      <button class="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
+
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ---------- HERO ---------- -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Discover a World Beneath the Waves</h1>
+      <p>Training, gear, and adventures for every diver — right here in Charlottesville.</p>
+      <a href="#services" class="btn btn-primary">Start Your Adventure</a>
+      <a href="#contact" class="btn btn-outline">Get in Touch</a>
+    </div>
+  </section>
+
+  <!-- ---------- ABOUT ---------- -->
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">Who We Are</h2>
+
+      <div class="about-grid">
+        <img src="https://i.postimg.cc/q7FnVqNQ/DC.webp" alt="Dive shop interior">
+
+        <div class="about-text">
+          <p>Since 1990, Dive Connections has been Central Virginia’s one-stop shop for scuba certifications, quality equipment, and unforgettable dive travel. Our PADI-certified instructors (23 on staff!) have introduced thousands to the thrill of breathing underwater, from the Blue Ridge quarries to the warm waters of the Caribbean.</p>
+          <p>Whether you’re taking your very first Open Water class or gearing up for an advanced live-aboard expedition, our mission is simple: **make every dive safe, fun, and eco-conscious.** Join our dive club, fill your tanks with fresh air or Nitrox, and connect to a passionate community that dives deep together.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- SERVICES ---------- -->
+  <section id="services" style="background:#fff;">
+    <div class="container">
+      <h2 class="section-title">What We Offer</h2>
+
+      <div class="services">
+        <div class="service-card">
+          <img src="assets/open_water.jpg" alt="Divers in open water" style="width:60px;">
+          <h3>Certification Courses</h3>
+          <p>PADI Open Water through Instructor Development, plus specialties like Dry Suit, Rescue, and Enriched Air.</p>
+        </div>
+
+        <div class="service-card">
+          <img src="assets/equipment_rental.jpg" alt="Rental gear" style="width:60px;">
+          <h3>Equipment Sales & Rental</h3>
+          <p>Top brands, professional advice, and full-service repairs to keep your kit trip-ready.</p>
+        </div>
+
+        <div class="service-card">
+          <img src="assets/air_fill.jpg" alt="Compressor" style="width:60px;">
+          <h3>Air & Nitrox Fills</h3>
+          <p>Ultra-clean, banked fills up to 3000 psi, with partial-pressure Nitrox 22-40% on demand.</p>
+        </div>
+
+        <div class="service-card">
+          <img src="assets/dive_travel.jpg" alt="Tropical reef" style="width:60px;">
+          <h3>Dive Travel</h3>
+          <p>Group trips to the Florida Keys, Bonaire, Cozumel, and beyond — just pack your mask!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- CONTACT ---------- -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Get in Touch</h2>
+
+      <div class="contact-info">
+        <span><strong>Visit us:</strong> 1754 Timberwood Blvd, Charlottesville, VA 22911</span>
+        <span><strong>Call:</strong> <a href="tel:+14349649200">(434) 964-9200</a></span>
+        <span><strong>Email:</strong> <a href="mailto:scuba@connect2diving.com">scuba@connect2diving.com</a></span>
+        <span><strong>Hours:</strong> Mon-Fri 11-7 · Sat 10-4 · Sun Closed</span>
+      </div>
+
+      
+      <iframe class="map" loading="lazy" allowfullscreen
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3084.279283219527!2d-78.46808202365128!3d38.174174871873186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b3867a1086821d%3A0xabe6bd2ec964f1a6!2s1754%20Timberwood%20Blvd%2C%20Charlottesville%2C%20VA%2022911!5e0!3m2!1sen!2sus!4v1715400000000">
+      </iframe>
+    </div>
+  </section>
+
+  <!-- ---------- FOOTER ---------- -->
+  <footer>
+    <p>&copy; Dive Connections · Charlottesville, VA</p>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    const toggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav ul');
+    toggle.addEventListener('click',()=>navLinks.classList.toggle('open'));
+  </script>
+</body>
+</html>
